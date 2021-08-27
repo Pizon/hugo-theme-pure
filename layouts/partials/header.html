@@ -7,7 +7,9 @@
           <a id="avatar" href="{{- $profile.follow }}" target="{{ cond (eq $profile.follow "/") "" "_blank" }}">
             <img class="img-circle img-rotate" src="{{- $profile.avatar | absURL }}" width="200" height="200">
           </a>
-          <h2 id="name" class="hidden-xs hidden-sm">{{- $profile.author }}</h2>
+          <h2 id="name" class="hidden-xs hidden-sm">
+            {{- $profile.author }}
+          </h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">{{- $profile.author_title }}</h3>
           <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> {{- $profile.location }}</small>
         </div>
