@@ -2,13 +2,18 @@
   {{- partial "social.html" . }}
   <div class="copyright">
     {{-  $current := now.Format "2006" }}
-    &copy;
+    &copy;&nbsp;
     {{- if ne .Site.Params.since $current -}}
         {{- print .Site.Params.since }}  -
     {{- end }}
     {{ $current }}
-    <div class="publishby">
-        {{T "copyright_theme_by"}} <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>{{T "copyright_base_on"}}<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    {{ $profile := .Site.Params.profile }}
+    {{- with $profile.enabled }}
+    {{- $profile.author }}
+    {{- end }}
+   
+<div class="publishby">
+        {{T "copyright_theme_by"}} </a>{{T "copyright_base_on"}}<a href="https://github.com/cofess/hexo-theme-pure" target="_blank"> pure for Hexo</a>
     </div>
     {{ if (isset .Site.Params "beian") }}
       <div>

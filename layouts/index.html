@@ -24,6 +24,11 @@
       <div class="article-entry text-muted" itemprop="description">
         {{ .Summary }}
       </div>
+      <div>
+        <p style="padding-top: 10pt; padding-bottom: 10pt">
+          <a href="{{ .RelPermalink }}" class="btn-jbrg">Read More</a>
+        </p>
+      </div>
       {{- end }}
       <p class="article-meta">
         {{- partial "post/date.html" . }}
