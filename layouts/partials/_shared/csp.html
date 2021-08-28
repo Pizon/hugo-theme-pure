@@ -1,5 +1,6 @@
 {{ 
-    printf `<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src %s; font-src %s; form-action %s; frame-src %s; img-src %s; object-src %s; style-src %s; script-src %s;">`
+    printf `<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src %s; child-src %s; font-src %s; form-action %s; frame-src %s; img-src %s; object-src %s; style-src %s; script-src %s;">`
+        (delimit .Site.Params.csp.defaultsrc " ")
         (delimit .Site.Params.csp.childsrc " ")
         (delimit .Site.Params.csp.fontsrc " ")
         (delimit .Site.Params.csp.formaction " ")
