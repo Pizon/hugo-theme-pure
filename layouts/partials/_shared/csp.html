@@ -1,5 +1,5 @@
 {{ 
-    printf `<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src %s; font-src %s; style-src %s; script-src %s; report-uri https://8dff7936c3c2ced10d3754e57cdd388b.report-uri.com/r/d/csp/reportOnly">`
+    printf `<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src %s; font-src %s; object-src 'none'; style-src %s; script-src %s;">`
         (delimit .Site.Params.csp.defaultsrc " ")
         (delimit .Site.Params.csp.fontsrc " ")
         (delimit .Site.Params.csp.stylesrc " ")
