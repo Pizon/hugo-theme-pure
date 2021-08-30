@@ -2649,7 +2649,8 @@ a.thumbnail.active {
 
 .media,
 .media-body {
-  zoom: 1;
+  /* zoom: 1; */
+  transform: scale(1);
   overflow: hidden;
 }
 
@@ -3341,7 +3342,8 @@ svg {
 }
 
 .clearfix {
-  *zoom: 1;
+  /* *zoom: 1; */
+  transform: scale(1);
 }
 
 /*other*/

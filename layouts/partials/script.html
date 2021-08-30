@@ -15,7 +15,8 @@
         classPrefix: ''     // don't append class prefix
         // … other options aren't changed
     })
-    hljs.initHighlightingOnLoad();
+    // hljs.initHighlightingOnLoad();
+    hljs.highlightAll();
 </script>
 {{- $appjs := resources.Get "js/application.js" | resources.Minify | resources.Fingerprint}}
 <script src="{{- $appjs.Permalink }}"></script>
@@ -40,7 +41,7 @@
 </script>
 {{- $insight := resources.Get "js/insight.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{- $insight.Permalink }}" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.13.1/tocbot.min.js" integrity="sha512-0oObpLtwkCvU3DivioJXpB4sSgVU8+zU++6nJcbn110aMrH/AoNjBYu+9+k4mE6zSYoPjdNt8Nb+5CPy8SUo7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     tocbot.init({
         // Where to render the table of contents.
